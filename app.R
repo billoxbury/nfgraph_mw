@@ -9,7 +9,7 @@ library(shape)
 
 #source("functions.R")
 
-load("../data/box_profiles_20151217.Rds")
+load("./data/box_profiles_20151217.Rds")
 # box sequence is bbox; functional layout is tsne.unwt
 # LINE layout is line_lout_12 = 100 cols level 2, 100 cols level 2
 
@@ -33,4 +33,5 @@ source("server.R")
 # RUN ----
 
 runApp(mwsApp(ui, server_calc, server_out),
-       launch.browser = TRUE)
+       host = "192.168.1.221",
+       launch.browser = FALSE)

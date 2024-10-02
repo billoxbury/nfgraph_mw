@@ -1,6 +1,3 @@
-#library(shiny)
-
-#load("data/box_profiles_20151217.Rds")
 
 ui <- list()
 
@@ -117,6 +114,21 @@ ui[["protoview"]] <- fluidPage(
               label = "Protocol amplifier:",
               min = 1, max = 10, value = 1)
 )
+
+####################################################################
+ui[["links"]] <- fluidPage(
+  titlePanel("Useful links"),
+  HTML('
+       <ol>
+  <li>Alexander D. Kent: <a href="https://csr.lanl.gov/data/cyber1/">Comprehensive multi-source cyber-security events</a>, doi:10.17021/1179829 (2015)</li>
+  <li>Laurens van der Maaten, Geoffrey Hinton: <a href="https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf">Visualizing Data using t-SNE</a>, Journal of Machine Learning Research, 1 (2008)</li>
+  <li>Laurens van der Maaten: <a href="https://arxiv.org/abs/1301.3342">Barnes-Hut-SNE</a>, arXiv:1301.3342v2 [cs.LG] (2013)</li>
+  <li>Bill Oxbury: <a href="https://billoxbury.github.io/data_science/lanl-netflow-1/">Exploring a computer network from its netflow traffic I</a> and
+  <a href="https://billoxbury.github.io/data_science/lanl-netflow-2/">II</a> blog posts (2018) 
+</ol>
+       ')
+)
+
 
 ####################################################################
 ui[["debug"]] <- fluidPage(
